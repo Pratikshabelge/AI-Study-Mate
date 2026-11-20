@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMate AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <header class="topbar">
+    <a class="logo" href="#">✦ StudyMate<span> AI</span></a>
+    <span class="status"><i></i> Your AI learning space</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">✦ YOUR PERSONAL LEARNING COPILOT</p>
+      <h1>Make learning <span>click.</span></h1>
+      <p class="subtitle">
+        Ask questions, simplify tough concepts and study smarter with AI.
+      </p>
+    </section>
+
+    <section class="features">
+      <button class="feature purple" data-mode="chat">
+        <span>◈</span>
+        <strong>AI Assistant</strong>
+        <small>Ask any question</small>
+      </button>
+      <button class="feature blue" data-mode="summarize">
+        <span>▤</span>
+        <strong>Summarize Notes</strong>
+        <small>Extract key points</small>
+      </button>
+      <button class="feature pink" data-mode="quiz">
+        <span>✳</span>
+        <strong>Quiz Generator</strong>
+        <small>Practice with questions</small>
+      </button>
+      <button class="feature green" data-mode="explain">
+        <span>⌘</span>
+        <strong>Explain Topic</strong>
+        <small>Learn in simple words</small>
+      </button>
+    </section>
+
+    <section class="chat-card">
+      <div class="chat-heading">
+        <div class="ai-icon">✦</div>
+        <div>
+          <strong id="panelTitle">Chat with StudyMate</strong>
+          <p><i></i> Ready to help you learn</p>
+        </div>
+        <span class="gemini-tag">GEMINI AI</span>
+      </div>
+
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="message assistant">
+          <div class="bubble">
+            <strong>Hey there! 👋</strong><br><br>
+            I'm your AI study buddy. What are you learning today?
+            Ask me anything or choose a tool above to get started.
+          </div>
+        </div>
+      </div>
+
+      <div class="suggestions" id="suggestions">
+        <button data-prompt="Explain artificial intelligence with simple examples.">
+          ✦ Explain AI
+        </button>
+        <button data-prompt="Give me five effective exam revision tips.">
+          ↗ Exam tips
+        </button>
+        <button data-prompt="Create a five-question quiz about computer networks.">
+          ✳ Quick quiz
+        </button>
+      </div>
+
+      <form id="chatForm">
+        <textarea id="userInput" rows="2"
+          placeholder="Ask a question or paste your study notes..."
+          aria-label="Enter your question"></textarea>
+        <div class="composer-bottom">
+          <small>Enter to send · Shift + Enter for a new line</small>
+          <button id="sendBtn" type="submit">Send ↗</button>
+        </div>
+      </form>
+
+      <p class="disclaimer">
+        AI can make mistakes. Verify important information before exams.
+      </p>
+    </section>
+
+    <footer>Made for curious minds ✦ Keep learning, keep growing.</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
